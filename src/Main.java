@@ -14,7 +14,7 @@ public class Main {
 			"Gianna_Notarbartolo", "Annetta_Sollima", "Erika_Gentilini", "Manuel_Toldo", "Eraldo_Bompiani", "Gabriella_Eco", "Ettore_Dallapé", "Bianca_Mannoia",
 			"Piersanti_Antonetti"};
 	
-	public static void main (String args[]) throws VehicleDuplicationException, IOException {
+	public static void main (String args[]) throws VehicleDuplicationException{
 		String path ="vetture.txt";
 		List<Vettura> vetture=new ArrayList<>(30);
 		String stringa="";

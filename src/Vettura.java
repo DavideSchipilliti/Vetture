@@ -1,4 +1,5 @@
 //classe vettura con attributi costruttore e getter e setter, possibile modifica= si potrebbe far passare la marca tramite costruttore.
+
 public class Vettura {
 	private String targa;
 	private String proprietario;
