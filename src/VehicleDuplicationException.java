@@ -1,5 +1,5 @@
 
-public class VehicleDuplicationException extends Exception {
+public class VehicleDuplicationException extends RuntimeException {
 
 	/**
 	 * 

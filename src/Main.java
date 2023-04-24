@@ -3,8 +3,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class Main {
 
@@ -21,14 +23,15 @@ public class Main {
 		
 		//creo le 30 vetture e il contenuto del file
 		for(String nominativo:nominativi) {
+			Set<String> targheUsate=new HashSet<>(30);
 			Vettura vettura=new Vettura(getRandTarga(), nominativo);
-			for (Vettura v2 : vetture) {
-				if (vettura.getTarga().equals(v2.getTarga()) ) throw new VehicleDuplicationException();
-			}
-
+			
+			if (targheUsate.contains(vettura.getTarga()) )
+				throw new VehicleDuplicationException();
+			
+			targheUsate.add(vettura.getTarga());
 			vetture.add(vettura);
 			stringa+=vettura.getTarga() + "|" + vettura.getMarca() + "|" + vettura.getProprietario() + "\n";
-			
 		}
 		stringa=stringa.substring(0, stringa.length()-1);	//tolgo l'ultimo \n
 		
