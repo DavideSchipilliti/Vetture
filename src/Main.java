@@ -20,10 +20,11 @@ public class Main {
 		String path ="vetture.txt";
 		List<Vettura> vetture=new ArrayList<>(30);
 		String stringa="";
+		Set<String> targheUsate=new HashSet<>(30);
 		
 		//creo le 30 vetture e il contenuto del file
 		for(String nominativo:nominativi) {
-			Set<String> targheUsate=new HashSet<>(30);
+			
 			Vettura vettura=new Vettura(getRandTarga(), nominativo);
 			
 			if (targheUsate.contains(vettura.getTarga()) )
